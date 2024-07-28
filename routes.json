@@ -1,0 +1,164 @@
+{
+    "routes":[
+		{
+			"code":"athletes",
+			"description": "athletes"
+		},
+		{
+			"code":"athletesbynoc",
+			"description": "noc-athletes"
+		},
+		{
+			"code":"bios",
+			"description": "athlete"
+		},
+		{
+			"code":"bracket",
+			"description": "bracket"
+		},
+		{
+			"code":"coaches",
+			"description": "coaches"
+		},
+		{
+			"code":"coach",
+			"description": "coach"
+		},
+		{
+			"code":"competitionschedule",
+			"description": "competition-schedule"
+		},
+		{
+			"code":"competitionstatus",
+			"description": "competition-status"
+		},
+		{
+			"code":"disciplineRecords",
+			"description": "discipline-records"
+		},
+		{
+			"code":"entries",
+			"description": "entries"
+		},
+		{
+			"code":"entriesbydiscipline",
+			"description": "discipline-entries"
+		},
+		{
+			"code":"entriesbynoc",
+			"description": "noc-entries"
+		},
+		{
+			"code":"hearingschedule",
+			"description": "hearing-schedule"
+		},
+		{
+			"code":"horses",
+			"description": "horses"
+		},
+		{
+			"code":"horse",
+			"description": "horse"
+		},
+		{
+			"code":"liveIndividual",
+			"description": "live-individual"
+		},
+		{
+			"code":"liveTeam",
+			"description": "live-team"
+		},
+		{
+			"code":"medal",
+			"description": "medals"
+		},
+		{
+			"code":"medallists",
+			"description": "medallists"
+		},
+		{
+			"code":"medallistsbynoc",
+			"description": "noc-medallists"
+		},
+		{
+			"code":"multimedallists",
+			"description": "multi-medallists"
+		},
+		{
+			"code":"noclist",
+			"description": "national-olympic-committees"
+		},
+		{
+			"code":"nocentriesbyevent",
+			"description": "noc-event-entries"
+		},
+		{
+			"code":"official",
+			"description": "official"
+		},
+		{
+			"code":"officials",
+			"description": "officials"
+		},
+		{
+			"code":"pool",
+			"description": "pool"
+		},
+		{
+			"code":"profilebynoc",
+			"description": "profile"
+		},
+		{
+			"code":"placings",
+			"description": "placings"
+		},
+		{
+			"code":"ranking",
+			"description": "medals-and-ranking"
+		},
+		{
+			"code":"records",
+			"description": "records"
+		},
+		{
+			"code":"reports",
+			"description": "reports"
+		},
+		{
+			"code":"results",
+			"description": "results"
+		},
+		{
+			"code":"schedule",
+			"description": "schedule"
+		},
+		{
+			"code":"schedulebynoc",
+			"description": "noc-schedule"
+		},
+		{
+			"code":"teams",
+			"description": "teams"
+		},
+		{
+			"code":"team",
+			"description": "team"
+		},
+		{
+			"code":"technicalofficials",
+			"description": "technical-officials"
+		},
+		{
+			"code":"todayathmatches",
+			"description": "athletics-today"
+		},
+		{
+			"code":"todaymatches",
+			"description": "today-matches"
+		},
+		{
+			"code":"todayteammatches",
+			"description": "today-team-matches"
+		}
+	] 	
+}

@@ -2,9 +2,12 @@ Source https://olympics.com/en/paris-2024/athletes
 
 ### Run
 ```bash
+cp A.json data.js
 chmod +x clean.sh
 bash ./clean.sh    # if you use bash and JQ
+head -c 300 ./output-jq.json
 node ./clean.js    # if you use nodejs
+head -c 300 ./output-nodejs.json
 ```
 
 ### Download

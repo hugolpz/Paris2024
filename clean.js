@@ -20,7 +20,7 @@ const result = data.persons.map(person => {
 const resultJson = JSON.stringify(result, null, 2);
 
 // Write the result to a file
-fs.writeFileSync('output.json', resultJson);
+fs.writeFileSync('output-nodejs.json', resultJson);
 
 console.log('Data written to output.json');
 

@@ -70,7 +70,8 @@ curl 'https://olympics.com/OG2024/assets/urls/SRM_URL_EN.json' \
 ```
 
 ### Sample
-A.json: 
+
+**Source:** A.json: 
 
 ```json
 {
@@ -168,3 +169,20 @@ A.json:
   ]
 }
 ```
+
+**Result:** output-nodejs.json and output-jq.js
+```json
+{
+  "persons": [
+    { ... },
+    {
+      "TVName": "Alejandra VALENCIA",
+      "birthDate": "1994-10-17",
+      "disciplines": ["Archery"],
+      "mainFunction": "Athlete",
+      "organisation": "Mexico",
+      "personGender": "Female"
+    },
+    { ... }
+]}```
+ 

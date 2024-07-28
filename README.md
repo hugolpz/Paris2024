@@ -1,5 +1,12 @@
 Source https://olympics.com/en/paris-2024/athletes
 
+### Run
+```bash
+chmod +x clean.sh
+bash ./clean.sh    # if you use bash and JQ
+node ./clean.js    # if you use nodejs
+```
+
 ### Download
 ```bash
 # A.json : all athletes

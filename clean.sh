@@ -13,7 +13,7 @@ jq '{
       personGender: .personGender.description
     }
   ]
-}' data.js > output.json
+}' data.js > output-jq.json
 
 echo "Data written to output.json"
 

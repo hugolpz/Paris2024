@@ -1,5 +1,7 @@
 Source https://olympics.com/en/paris-2024/athletes
 
+Individual athlete sample : https://olympics.com/en/paris-2024/athlete/alejandra-valencia_1535420
+
 ### Run
 ```bash
 cp A.json data.js

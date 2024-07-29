@@ -1,6 +1,13 @@
 Source https://olympics.com/en/paris-2024/athletes
 
-Individual athlete sample : https://olympics.com/en/paris-2024/athlete/alejandra-valencia_1535420
+### All athletes
+- All athletes list webpage : https://olympics.com/en/paris-2024/athletes
+- All athletes data (12MB) : https://olympics.com/OG2024/data/MIS_Athletes~comp=OG2024~lang=ENG~functionCategory=A.json
+
+
+### Individual athlete
+- Individual athlete webpage : https://olympics.com/en/paris-2024/athlete/alejandra-valencia_1535420
+- Individual athlete data : https://olympics.com/OG2024/data/CIS_Bio_Athlete~comp=OG2024~code=1535420~lang=ENG.json
 
 ### Run
 ```bash

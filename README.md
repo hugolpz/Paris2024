@@ -138,19 +138,17 @@ jq '.[0]' ./output-nodejs.json
 
 **Result:** output-nodejs.json and output-jq.json
 ```json
-{
-  "persons": [
-    { ... },
-    {
-      "code": "1535420",
-      "TVName": "Alejandra VALENCIA",
-      "personGender": "Female",
-      "mainFunction": "Athlete",
-      "birthDate": "1994-10-17",
-      "disciplines": ["Archery"],
-      "organisationCode": "MEX",
-      "organisation": "Mexico",
-    },
-    { ... }
-]}```
- 
+[
+  { ... },
+  {
+    "code": "1535420",
+    "TVName": "Alejandra VALENCIA",
+    "personGender": "Female",
+    "mainFunction": "Athlete",
+    "birthDate": "1994-10-17",
+    "disciplines": ["Archery"],
+    "organisationCode": "MEX",
+    "organisation": "Mexico",
+  },
+  { ... }
+]```

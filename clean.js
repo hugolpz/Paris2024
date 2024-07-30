@@ -13,7 +13,7 @@ const result = data.persons.map(person => {
     personGender: person.personGender.description,
     mainFunction: person.mainFunction.description,
     disciplines: person.disciplines.map(discipline => discipline.description),
-    organisation: person.organisation.code,
+    organisationCode: person.organisation.code,
     organisation: person.organisation.description
   };
 });

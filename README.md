@@ -12,17 +12,27 @@ Source https://olympics.com/en/paris-2024/athletes
 ### Download data
 ```bash
 chmod +x ./fetch.sh 
-bash ./fetch.sh
-mv ./data/A.json data.js
+bash ./fetch.sh                      # download data
+cp ./data/A.json data.json             # create working copy 
+jq '.persons[0]' ./data.json         # preview first object in { persons : [{},{},{},...]}
+jq '.persons | length' ./data.json   # count athletes : 11,067 as of 2024.07.30
 ```
 
 ### Run
 ```bash
+sudo apt-get install jq          # install JQ
 chmod +x ./clean.sh
 bash ./clean.sh                  # if you use bash and JQ
-head -c 300 ./output-jq.json     # output preview
 node ./clean.js                  # if you use nodejs
-head -c 300 ./output-nodejs.json # output preview
+```
+
+### 
+Preview length and sample:
+```bash
+jq 'length' ./output-jq.json   # count athletes : 11,067 as of 2024.07.30
+jq '[0]' ./output-jq.json      # preview first object in { persons : [{},{},{},...]}
+jq 'length' ./output-nodejs.json
+jq '[0]' ./output-nodejs.json
 ```
 
 ### Sample
@@ -126,7 +136,7 @@ head -c 300 ./output-nodejs.json # output preview
 }
 ```
 
-**Result:** output-nodejs.json and output-jq.js
+**Result:** output-nodejs.json and output-jq.json
 ```json
 {
   "persons": [

@@ -5,15 +5,16 @@ jq '{
   persons: [
     .persons[] |
     {
+      code: .code,
       TVName: .TVName,
       birthDate: .birthDate,
-      disciplines: [.disciplines[].description],
+      personGender: .personGender.description,
       mainFunction: .mainFunction.description,
+      disciplines: [.disciplines[].description],
+      organisationCode: .organisation.code,
       organisation: .organisation.description,
-      personGender: .personGender.description
     }
   ]
-}' data.js > output-jq.json
+}' data.json > output-jq.json
 
 echo "Data written to output.json"
-

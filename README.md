@@ -9,73 +9,20 @@ Source https://olympics.com/en/paris-2024/athletes
 - Individual athlete webpage : https://olympics.com/en/paris-2024/athlete/alejandra-valencia_1535420
 - Individual athlete data : https://olympics.com/OG2024/data/CIS_Bio_Athlete~comp=OG2024~code=1535420~lang=ENG.json
 
-### Run
+### Download data
 ```bash
-cp A.json data.js
-chmod +x clean.sh
-bash ./clean.sh    # if you use bash and JQ
-head -c 300 ./output-jq.json
-node ./clean.js    # if you use nodejs
-head -c 300 ./output-nodejs.json
+chmod +x ./fetch.sh 
+bash ./fetch.sh
+mv ./data/A.json data.js
 ```
 
-### Download
+### Run
 ```bash
-# A.json : all athletes
-curl 'https://olympics.com/OG2024/data/MIS_Athletes~comp=OG2024~lang=ENG~functionCategory=A.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
-
-# ParticipantsNames
-curl 'https://olympics.com/OG2024/data/MIS_ParticipantNames~comp=OG2024~lang=ENG.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
-
-# NOC comp
-curl 'https://olympics.com/OG2024/data/MIS_NOCS~comp=OG2024~lang=ENG.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
-
-# SportsCodes
-curl 'https://olympics.com/OG2024/data/GLO_SportCodes~comp=OG2024~lang=ENG.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
-
-# Disciplines
-curl 'https://olympics.com/OG2024/data/GLO_Disciplines~comp=OG2024~lang=ENG.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
-
-# H1
-curl 'https://olympics.com/OG2024/data/CIS_H1~comp=OG2024.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
-
-# 
-curl 'https://olympics.com/OG2024/assets/urls/SRM_URL_EN.json' \
-  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"' \
-  -H 'Referer: https://olympics.com/en/paris-2024/athletes' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Linux"'
+chmod +x ./clean.sh
+bash ./clean.sh                  # if you use bash and JQ
+head -c 300 ./output-jq.json     # output preview
+node ./clean.js                  # if you use nodejs
+head -c 300 ./output-nodejs.json # output preview
 ```
 
 ### Sample
@@ -185,12 +132,14 @@ curl 'https://olympics.com/OG2024/assets/urls/SRM_URL_EN.json' \
   "persons": [
     { ... },
     {
+      "code": "1535420",
       "TVName": "Alejandra VALENCIA",
       "birthDate": "1994-10-17",
+      "personGender": "Female"
       "disciplines": ["Archery"],
       "mainFunction": "Athlete",
       "organisation": "Mexico",
-      "personGender": "Female"
+      "organisationCode": "MEX",
     },
     { ... }
 ]}```

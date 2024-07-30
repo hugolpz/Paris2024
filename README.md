@@ -30,9 +30,9 @@ node ./clean.js                  # if you use nodejs
 Preview length and sample:
 ```bash
 jq 'length' ./output-jq.json   # count athletes : 11,067 as of 2024.07.30
-jq '[0]' ./output-jq.json      # preview first object in { persons : [{},{},{},...]}
+jq '.[0]' ./output-jq.json      # preview first object in { persons : [{},{},{},...]}
 jq 'length' ./output-nodejs.json
-jq '[0]' ./output-nodejs.json
+jq '.[0]' ./output-nodejs.json
 ```
 
 ### Sample

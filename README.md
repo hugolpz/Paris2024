@@ -144,12 +144,12 @@ jq '[0]' ./output-nodejs.json
     {
       "code": "1535420",
       "TVName": "Alejandra VALENCIA",
-      "birthDate": "1994-10-17",
-      "personGender": "Female"
-      "disciplines": ["Archery"],
+      "personGender": "Female",
       "mainFunction": "Athlete",
-      "organisation": "Mexico",
+      "birthDate": "1994-10-17",
+      "disciplines": ["Archery"],
       "organisationCode": "MEX",
+      "organisation": "Mexico",
     },
     { ... }
 ]}```

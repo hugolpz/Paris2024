@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Read the JSON data from data.js and process it with jq
-jq '{
-  persons: [
+jq '[
     .persons[] |
     {
       code: .code,
@@ -14,7 +13,6 @@ jq '{
       organisationCode: .organisation.code,
       organisation: .organisation.description,
     }
-  ]
-}' data.json > output-jq.json
+  ]' data.json > output-jq.json
 
-echo "Data written to output.json"
+echo "Data written to output-jq.json"

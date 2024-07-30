@@ -24,4 +24,4 @@ const resultJson = JSON.stringify(result, null, 2);
 // Write the result to a file
 fs.writeFileSync('output-nodejs.json', resultJson);
 
-console.log('Data written to output.json');
+console.log('Data written to output-nodejs.json');
